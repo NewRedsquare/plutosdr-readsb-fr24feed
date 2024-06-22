@@ -19,7 +19,7 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v4
         with:
-          name: img
+          name: usb.img.gz
           path: ./usb.img.gz
       - name: Release build artifacts
         uses: softprops/action-gh-release@v2
