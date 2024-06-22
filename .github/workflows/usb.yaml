@@ -16,7 +16,11 @@ jobs:
 
       - name: Run build process
         run: sudo bash build_host.sh
-
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v4
+        with:
+          name: img
+          path: ./usb.img.gz
       - name: Release build artifacts
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
